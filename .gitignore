@@ -1,1 +1,32 @@
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
 venv/
+ENV/
+env/
+
+# VS Code or PyCharm settings (optional)
+.vscode/
+.idea/
+
+# Django database
+db.sqlite3
+
+# Django migration backups
+*.sqlite3-journal
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Media uploads (optional for now)
+media/
+
+# Tailwind CSS (if you generate output files)
+static/css/
+
+
+
