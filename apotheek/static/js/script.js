@@ -255,6 +255,7 @@ const heroHeading = document.querySelector('.hero h1');
 if (heroHeading) {
     let index = 0;
     let forward = true;
+    heroHeading.style.width = `${typewriterText.length}ch`;
 
     function typeEffect() {
         if (forward) {

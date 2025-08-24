@@ -1,58 +1,89 @@
+{%load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APOTHEEK - Comfortable & Stylish Medical Scrubs</title>
-    <link rel="stylesheet" href="css/styles.css"> 
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <link href="{% static 'css/dist/styles.css' %}" rel="stylesheet">
 </head>
 <body>
 
   
-
-
     <!-- NAVBAR Section -->
-    <header class="navbar">
-        <div class="container navbar-container">
-            <div class="logo">
-                <div class="logo-circles">
-                    <div class="circle dark-blue"></div>
-                    <div class="circle teal"></div>
-                </div>
-                <h1>APOTHEEK</h1>
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Men</a></li>
-                    <li><a href="#">Women</a></li>
-                    <li><a href="#">Unisex</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="auth-nav">
-            <!-- Search Icon -->
-                <a href="#" class="icon-link"><i class="fas fa-search"></i></a>
+<!-- <header class="navbar">
+  <div class="container navbar-container">
+     -->
+    <!-- Logo -->
+    <!-- <div class="logo">
+      <img src="{% static 'assets/images/aplogo.png' %}" 
+           alt="Apotheek Logo" 
+           class="logo-img">
+    </div> -->
 
-                <!-- Cart Button -->
-                <a href="#" class="icon-link">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">0</span>
-                </a>
+    <!-- Nav Links -->
+    <!-- <nav class="main-nav">
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">Unisex</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav> -->
 
-                <!-- Profile Button -->
-                <a href="#" class="icon-link"><i class="fas fa-user"></i></a>
-            </div>
-            <div class="hamburger-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </header>
+    <!-- Icons -->
+    <!-- <div class="auth-nav">
+      <a href="#" class="icon-link"><i class="fas fa-search"></i></a>
+      <a href="#" class="icon-link">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+      </a>
+      <a href="#" class="icon-link"><i class="fas fa-user"></i></a>
+    </div> -->
+
+    <!-- Hamburger -->
+    <!-- <div class="hamburger-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+  </div> 
+</header> -->
+
+
+<nav class="bg-white shadow-md">
+  <div class="container mx-auto flex items-center justify-between px-4 py-2">
+    
+    <!-- Left: Logo -->
+    <div class="flex-shrink-0">
+      <img src="{% static 'assets/images/aplogo.png' %}" alt="Logo" class="h-12 w-auto">
+    </div>
+    
+    <!-- Center: Menu -->
+    <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
+      <li><a href="#" class="hover:text-teal-600">Home</a></li>
+      <li><a href="#" class="hover:text-teal-600">About</a></li>
+      <li><a href="#" class="hover:text-teal-600">Men</a></li>
+      <li><a href="#" class="hover:text-teal-600">Women</a></li>
+      <li><a href="#" class="hover:text-teal-600">Unisex</a></li>
+      <li><a href="#" class="hover:text-teal-600">Contact</a></li>
+    </ul>
+    
+    <!-- Right: Icons -->
+    <div class="flex space-x-4">
+      <a href="#"><i class="fa fa-user text-xl text-gray-700 hover:text-teal-600"></i></a>
+      <a href="#"><i class="fa fa-heart text-xl text-gray-700 hover:text-teal-600"></i></a>
+      <a href="#"><i class="fa fa-shopping-cart text-xl text-gray-700 hover:text-teal-600"></i></a>
+    </div>
+    
+  </div>
+</nav>
+
 
     <!-- HERO Section -->
     <section class="hero">
@@ -94,7 +125,7 @@
                 <div class="product-card">
                     <div class="product-image">
                         <span class="sale-badge">SALE</span>
-                        <img src="assets/images/model1.jpg" alt="Professional Navy Scrub Set">
+                        <img src="{% static 'assets/images/FPmodel1.jpg' %}" alt="Professional Navy Scrub Set">
                     </div>
                     <div class="product-info">
                         <span class="product-category">Unisex</span>
@@ -109,7 +140,7 @@
                 
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="assets/images/model1.jpg" alt="Comfort Teal Scrubs">
+                        <img src="{% static 'assets/images/FPmodel2.jpg' %}" alt="Comfort Teal Scrubs">
                     </div>
                     <div class="product-info">
                         <span class="product-category">Women</span>
@@ -123,7 +154,7 @@
                 
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="assets/images/model1.jpg" alt="Classic White Scrub Set">
+                        <img src="{% static 'assets/images/FPmodel3.jpg' %}" alt="Classic White Scrub Set">
                     </div>
                     <div class="product-info">
                         <span class="product-category">Men</span>
@@ -137,7 +168,7 @@
                 
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="assets/images/model1.jpg" alt="Modern Gray Scrubs">
+                        <img src="{% static 'assets/images/FPmodel4.jpg' %}" alt="Modern Gray Scrubs">
                     </div>
                     <div class="product-info">
                         <span class="product-category">Unisex</span>
@@ -302,12 +333,8 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <div class="logo-circles">
-                            <div class="circle dark-blue"></div>
-                            <div class="circle teal"></div>
-                        </div>
-                        <h2>APOTHEEK</h2>
-                    </div>
+    <img src="{% static 'assets/images/aplogo.png' %}" alt="Apotheek Logo" class="footer-logo-img">
+</div>
                     <p>Premium medical scrubs designed for healthcare professionals who demand comfort, style, and durability</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -360,7 +387,7 @@
     </footer>
 
     
-    <script src="js/script.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 
 
